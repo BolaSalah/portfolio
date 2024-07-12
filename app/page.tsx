@@ -3,6 +3,7 @@ import Nav from "@/Components/Nav";
 import Image from "next/image";
 import { useState } from "react";
 import MobileNav from './../Components/MobileNav';
+import Hero from "./Hero";
 
 export default function Home() {
   const [ nav, setNav ] = useState(false);
@@ -13,7 +14,10 @@ export default function Home() {
     <div className="overflow-x-hidden font-primary">
       {/* Navbar */}
       <MobileNav nav={nav} closeNav={closeNav}/>
-      <Nav openNav={openNav}/>
+      <Nav openNav={openNav} />
+      
+      {/* hero section */}
+      <Hero />
     </div>
   );
 }
