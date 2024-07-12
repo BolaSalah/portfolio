@@ -8,7 +8,7 @@ import {
 } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 
-export  const Particle = () => {
+ const Particle = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -104,3 +104,5 @@ export  const Particle = () => {
 
   return <></>;
 };
+
+export default Particle;
