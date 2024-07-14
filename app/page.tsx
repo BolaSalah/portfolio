@@ -5,6 +5,7 @@ import Nav from "@/Components/Nav";
 import MobileNav from './../Components/MobileNav';
 import Hero from './../Components/Hero';
 import About from './../Components/About';
+import Projects from "@/Components/Projects";
 
 export default function Home() {
   const [ nav, setNav ] = useState(false);
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* about section */}
       <About />
+
+      {/* Projects section */}
+      <Projects />
     </div>
   );
 }

@@ -7,7 +7,7 @@ const About = () => {
     {monthStart:"Nov",yearStart:"2023",monthEnd:"April",yearEnd:"2024",title:"ITI course for 4 months",dep:"Front-End Development"},
   ]
   return (
-    <div className='bg-slate-800 py-20 relative z-20'>
+    <div className='bg-slate-800 py-20 relative'>
       <h1 className='w-[80%] mx-auto lg:hidden block uppercase font-bold text-4xl text-white mb-12 text-center'>
             About <span className='text-yellow-300'>me</span>
           </h1>
