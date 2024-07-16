@@ -7,7 +7,7 @@ interface props {
 
 const Nav = ({ openNav }: props) => {
   return (
-    <div className=' shadow-md w-[100%] h-[12vh] bg-[#141c27] z-50 sticky top-0 '>
+    <div className=' shadow-md w-[100%] h-[12vh] bg-[#141c27] z-30 relative top-0 '>
       <div className='flex justify-between items-center h-full w-[80%] mx-auto'>
         <h1 className='flex-[0.6] font-bold text-[25px] text-white cursor-pointer'>
           WEP
