@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       fontFamily: {
         primary:["Poppins"]
+      },
+      boxShadow:{
+        "CardProjects": "0px 0px 6px 1px #8f868680",
       }
     },
   },
