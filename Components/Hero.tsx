@@ -5,7 +5,7 @@ import TextEffect from './TextEffect';
 const Hero = () => {
   return (
     <div className='p-16 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden'>
-      <Particle /> 
+      <Particle />
       <div className='lg:pt-1 pt-2 grid md:grid-cols-2 grid-cols-1 justify-items-center items-center w-[80%] h-full gap-12 mx-auto'>
         {/* hero-main */}
         <div className='flex flex-col justify-center lg:items-start items-center md:order-1 order-2'>
@@ -29,7 +29,10 @@ const Hero = () => {
           </div>
         </div>
         {/* hero-image */}
-        <div className='md:order-2 order-1 lg:w-[400px] lg:h-[400px] sm:w-[300px] sm:h-[300px] w-[220px] h-[220px] relative flex items-center justify-center rounded-full overflow-hidden'>
+        <div
+          data-aos='zoom-in'
+          className='md:order-2 order-1 lg:w-[400px] lg:h-[400px] sm:w-[300px] sm:h-[300px] w-[220px] h-[220px] relative flex items-center justify-center rounded-full overflow-hidden'
+        >
           <img
             src='./images/3.png'
             alt='bola'
