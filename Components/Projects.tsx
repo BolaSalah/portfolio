@@ -20,7 +20,7 @@ const Projects = () => {
       skills: 'React.JS TailwindCSS',
     },
     {
-      GithubRepoLink: '',
+      GithubRepoLink: 'https://github.com/BolaSalah',
       title: 'Amazone-clone ( ITI )',
       imageUrl: './images/projects/1-Jewellery.png',
       date: 'Mar & Apr - 2024',
@@ -55,8 +55,8 @@ const Projects = () => {
           <div
             data-aos='fade-up'
             data-aos-delay='300'
-            className='bg-slate-800 text-white text-center my-4 lg:w-[30%] sm:w-[45%] w-[90%] transition duration-500 rounded-lg 
-             transform  hover:-translate-y-3 shadow-CardProjects'
+            className='bg-slate-700 text-white text-center my-4 lg:w-[30%] sm:w-[45%] w-[90%] transition !duration-500 rounded-lg 
+             transform  hover:bg-slate-800 shadow-CardProjects'
             key={index}
           >
             <Link href={project.GithubRepoLink} target='_blank'>
