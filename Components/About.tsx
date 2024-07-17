@@ -45,7 +45,7 @@ const About = () => {
           {data.map((ele, index) => (
             <div
               data-aos='fade-left'
-              data-aos-delay='300'
+              data-aos-delay='100'
               className='flex items-center text-center bg-[#55e6a5] my-10'
               key={index}
             >

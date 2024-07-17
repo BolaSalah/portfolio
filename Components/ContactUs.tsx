@@ -23,7 +23,7 @@ const ContactUs = () => {
         {ContactUsArray.map((item, index) => (
           <div
             data-aos='fade-up'
-            data-aos-delay='300'
+            data-aos-delay='100'
             key={index}
             className='lg:w-[33%] sm:w-[49%] w-[98%]  mx-auto my-10 flex gap-5 p-4 '
           >

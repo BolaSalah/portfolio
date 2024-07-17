@@ -32,7 +32,7 @@ const Skills = () => {
         {SkillsArray.map((skill, index) => (
           <div
             data-aos='fade-up'
-            data-aos-delay='300'
+            data-aos-delay='100'
             key={index}
             className='md:w-[19%] sm:w-[32%] w-[40%] flex flex-col items-center mb-10 py-4 bg-[#55e6a5]'
           >
