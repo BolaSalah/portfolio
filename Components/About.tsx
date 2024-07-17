@@ -1,7 +1,18 @@
 import React from 'react';
-
+ 
+ interface IData  {
+      monthStart: string,
+      yearStart: string,
+      monthEnd: string,
+      yearEnd: string,
+      title: string,
+      dep: string
+}
+    
 const About = () => {
-  const data = [
+
+  // Array of data
+  const data:IData[] = [
     {
       monthStart: 'Sep',
       yearStart: '2019',

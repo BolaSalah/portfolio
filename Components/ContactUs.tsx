@@ -3,10 +3,16 @@ import { BiLogoGmail } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 
+interface IElement {
+  title: string,
+  icon: React.JSX.Element,
+  data: string
+}
+
 const ContactUs = () => {
 
     // Array of project
-    const ContactUsArray = [
+    const ContactUsArray:IElement[] = [
       { title: 'Address', icon: <FaLocationDot />, data: 'El Nozha 2 - Cairo'},
       { title: 'WhatsApp', icon: <FaWhatsapp />, data: '01202554039'},
       { title: 'Send Us Email', icon: <BiLogoGmail />, data: 'BolaSalah1999@gmail.com'}

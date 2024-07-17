@@ -4,10 +4,15 @@ import { IoLogoJavascript } from 'react-icons/io';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import { SiJest, SiTypescript } from 'react-icons/si';
 
+interface ISkill {
+  title: string;
+  icon: React.JSX.Element;
+}
+
 const Skills = () => {
 
   // Array of project
-    const SkillsArray = [
+    const SkillsArray:ISkill[] = [
       { title: 'Html', icon: <FaHtml5 /> },
       { title: 'Css', icon: <FaCss3Alt /> },
       { title: 'Tailwind', icon: <RiTailwindCssFill /> },

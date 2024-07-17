@@ -1,10 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Projects = () => {
+interface IProject {
+  GithubRepoLink: string,
+      title:string,
+      imageUrl:string,
+      date:string,
+      skills:string,
+}
 
+const Projects = () => {
+  
   // Array of project
-  const projectsArray = [
+  const projectsArray:IProject[] = [
     {
       GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
       title: 'Portfolie',
