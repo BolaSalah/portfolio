@@ -12,7 +12,7 @@ interface IProject {
 const Projects = () => {
   
   // Array of project
-  const projectsArray:IProject[] = [
+  const projectsArray: IProject[] = [
     {
       GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
       title: 'Portfolie',
@@ -28,9 +28,9 @@ const Projects = () => {
       skills: 'React.JS TailwindCSS',
     },
     {
-      GithubRepoLink: 'https://github.com/BolaSalah',
+      GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon-App',
       title: 'Amazone-clone ( ITI )',
-      imageUrl: './images/projects/1-Jewellery.png',
+      imageUrl: './images/projects/3-AmazonClone.png',
       date: 'Mar & Apr - 2024',
       skills: 'React.JS TailwindCSS',
     },
