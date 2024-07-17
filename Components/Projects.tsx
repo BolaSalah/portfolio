@@ -28,7 +28,7 @@ const Projects = () => {
       skills: 'React.JS TailwindCSS',
     },
     {
-      GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon-App',
+      GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon',
       title: 'Amazone-clone ( ITI )',
       imageUrl: './images/projects/3-AmazonClone.png',
       date: 'Mar & Apr - 2024',
