@@ -22,31 +22,34 @@ const ContactUs = () => {
     },
   ];
 
-  // get location
-  const [latitude, setLatitude] = useState<number>();
-  const [longitude, setLongitude] = useState<number>();
-  const [error, setError] = useState<string>();
+  // get my location
+  // const [latitude, setLatitude] = useState<number>();
+  // const [longitude, setLongitude] = useState<number>();
+  // const [error, setError] = useState<string>();
 
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          setLatitude(position.coords.latitude);
-          setLongitude(position.coords.longitude);
-        },
-        (error) => {
-          setError(error.message);
-          console.error('Error retrieving location:', error);
-        }
-      );
-    } else {
-      setError('Geolocation is not supported by this browser.');
-      console.error('Geolocation is not supported by this browser.');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         console.log(position);
+  //         setLatitude(position.coords.latitude);
+  //         setLongitude(position.coords.longitude);
+  //       },
+  //       (error) => {
+  //         setError(error.message);
+  //         console.error('Error retrieving location:', error);
+  //       }
+  //     );
+  //   } else {
+  //     setError('Geolocation is not supported by this browser.');
+  //     console.error('Geolocation is not supported by this browser.');
+  //   }
+  // }, []);
 
   // url of my location
   const mapUrl = 'https://maps.google.com/?q='; 
+  const latitude = 30.1427316; 
+  const longitude = 31.3754579; 
 
   // code, whatsAppUrl and phone for whatsapp masssage
   const countryCode = '+20'; 
