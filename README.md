@@ -15,7 +15,7 @@
   <h3 align="center">My Portfolio</h3>
 
    <div align="center">
-     using Reactjs with Next JS & type script , Tailwind-css, tsparticles for a dynamic background, aos for animation and type-animation for text animation.
+     using React.js with Next.js & type script , Tailwind-css, tsparticles for a dynamic background, aos for animation and type-animation for text animation.
     </div>
 </div>
 
@@ -25,6 +25,7 @@
 2.  🔋  [Features](#features)
 3. ⚙️ [Packeges](#Packeges)
 4. 🤸 [Quick Start](#quick-start)
+4. 💳 [License](#License)
 5. 📸 [Screenshot](#Screenshot)
 
 ## <a name="Deployment">🚀 Deployment</a>
@@ -77,6 +78,12 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+
+5. 📸 [Screenshot](#Screenshot)
+
+## <a name="License">💳 License </a>
+Distributed under the [MIT License](LICENSE) , click for more information.       
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## <a name="Screenshot">📸 Screenshot</a>
   
