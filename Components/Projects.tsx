@@ -55,26 +55,27 @@ const Projects = () => {
           <div
             data-aos='fade-up'
             data-aos-delay='100'
-            className='bg-slate-700 text-white text-center my-4 lg:w-[30%] sm:w-[45%] w-[90%] transition !duration-500 rounded-lg 
-             transform  hover:bg-slate-800 shadow-CardProjects'
+            className='bg-slate-700 my-4 lg:w-[30%] sm:w-[45%] w-[90%] rounded-lg shadow-CardProjects overflow-hidden'
             key={index}
           >
             <Link href={project.GithubRepoLink} target='_blank'>
-              <div>
-                <img
-                  className='mb-5 h-[220px] w-full'
-                  src={project.imageUrl}
-                  alt={project.title}
-                />
+              <div className=' hover:bg-slate-800 duration-500 transition text-white  text-center'>
+                <div>
+                  <img
+                    className='mb-5 h-[220px] w-full'
+                    src={project.imageUrl}
+                    alt={project.title}
+                  />
+                </div>
+                <div className='title'>{project.title}</div>
+                <div className=' [word-spacing:5px] text-sm xl:text-lg'>
+                  {project.skills}
+                </div>
+                <div className='mt-2'>{project.date}</div>
+                <button className='my-6 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black'>
+                  more
+                </button>
               </div>
-              <div className='title'>{project.title}</div>
-              <div className=' [word-spacing:5px] text-sm xl:text-lg'>
-                {project.skills}
-              </div>
-              <div className='mt-2'>{project.date}</div>
-              <button className='my-6 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black'>
-                more
-              </button>
             </Link>
           </div>
         ))}
