@@ -30,7 +30,6 @@ const Hero = () => {
         </div>
         {/* hero-image */}
         <div
-          data-aos='zoom-in'
           className='md:order-2 order-1 lg:w-[400px] lg:h-[400px] sm:w-[300px] sm:h-[300px] w-[220px] h-[220px] relative flex items-center justify-center rounded-full overflow-hidden'
         >
           <img
