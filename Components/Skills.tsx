@@ -26,7 +26,7 @@ const Skills = () => {
     ];
     
   return (
-    <div className='bg-slate-800 p-12 relative'>
+    <div className='bg-slate-800 p-8 relative'>
       <h1
         data-aos='zoom-in'
         className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
@@ -39,7 +39,7 @@ const Skills = () => {
             data-aos='fade-up'
             data-aos-delay='100'
             key={index}
-            className='md:w-[19%] sm:w-[32%] w-[40%] flex flex-col items-center mb-10 py-4 bg-[#55e6a5]'
+            className='md:w-[19%] sm:w-[32%] w-[40%] flex flex-col items-center mb-2 sm:mb-10 py-4 bg-[#55e6a5]'
           >
             <div className='sm:text-8xl text-6xl'>{skill.icon}</div>
             <p className='sm:text-xl mt-3'>{skill.title}</p>

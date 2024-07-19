@@ -4,7 +4,7 @@ import Particle from './Particle';
 import TextEffect from './TextEffect';
 const Hero = () => {
   return (
-    <div className='p-16 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden'>
+    <div className='p-8 sm:p-16 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden'>
       <Particle />
       <div className='lg:pt-1 pt-2 grid md:grid-cols-2 grid-cols-1 justify-items-center items-center w-[80%] h-full gap-12 mx-auto'>
         {/* hero-main */}

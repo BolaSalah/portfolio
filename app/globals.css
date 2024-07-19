@@ -18,6 +18,7 @@
     after:transition after:duration-300 ;
   }
   .title{
-    @apply font-bold lg:text-xl md:text-lg text-sm mb-12 relative items-center mx-auto  after:absolute after:mt-5 after:ms-[38%] after:w-1/4 after:h-1 after:bg-[#55e6a5] after:block
+    @apply font-bold lg:text-xl md:text-lg text-sm mb-6 relative items-center mx-auto 
+      after:absolute after:mt-2 after:ms-[38%] after:w-1/4 after:h-1 after:bg-[#55e6a5] after:block
   }
 }

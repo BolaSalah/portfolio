@@ -45,7 +45,7 @@ const About = () => {
       </h1>
       <div className='w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 items-center overflow-x-hidden'>
         {/* about-data */}
-        <div className='px-10 lg:order-1 order-2'>
+        <div className='px-4 sm:px-10 lg:order-1 order-2'>
           <h1
             data-aos='zoom-in'
             className=' hidden lg:block uppercase font-bold text-3xl text-white mb-5 text-center'
@@ -60,7 +60,7 @@ const About = () => {
               className='flex items-center text-center bg-[#55e6a5] my-10'
               key={index}
             >
-              <div className='bg-yellow-300 -rotate-[30deg] origin-bottom-left sm:text-xl w-[15%] '>
+              <div className='bg-yellow-300 sm:-rotate-[30deg] origin-bottom-left sm:text-xl w-[15%] '>
                 <p>{ele.monthStart}</p>
                 <p>{ele.yearStart}</p>
               </div>
@@ -68,7 +68,7 @@ const About = () => {
                 <p>{ele.title}</p>
                 <p>{ele.dep}</p>
               </h1>
-              <div className='bg-yellow-300 rotate-[30deg] origin-bottom-right sm:text-xl w-[15%] '>
+              <div className='bg-yellow-300 sm:rotate-[30deg] origin-bottom-right sm:text-xl w-[15%] '>
                 <p>{ele.monthEnd}</p>
                 <p>{ele.yearEnd}</p>
               </div>

@@ -82,7 +82,7 @@ const ContactUs = () => {
       }
   };
   return (
-    <div className=' bg-black p-12 relative' id='contact'>
+    <div className=' bg-black p-8 relative' id='contact'>
       <h1
         data-aos='zoom-in'
         className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
@@ -95,7 +95,7 @@ const ContactUs = () => {
             data-aos='fade-up'
             data-aos-delay='100'
             key={index}
-            className='lg:w-[33%] sm:w-[49%] w-[98%] my-10 p-4 flex sm:gap-5 gap-1 mx-auto hover:cursor-pointer relative'
+            className='lg:w-[33%] sm:w-[49%] w-[98%] my-10 p-4 flex sm:gap-5 gap-3 mx-auto hover:cursor-pointer relative'
           >
             <button
             name={item.title}
@@ -108,7 +108,7 @@ const ContactUs = () => {
               <div className='sm:text-7xl text-4xl bg-[#55e6a5] p-4 rounded-full'>
                 {item.icon}
               </div>
-              <div className='text-white mt-2'>
+              <div className='text-white sm:mt-4'>
                 <h1 className='sm:text-2xl text-lg mb-3'>{item.title}</h1>
                 <p className='sm:text-lg text-sm'>{item.data}</p>
               </div>

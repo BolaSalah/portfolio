@@ -80,7 +80,7 @@ const Projects = () => {
                   {project.skills}
                 </div>
                 <div className='mt-2'>{project.date}</div>
-                <button className='my-6 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black'>
+                <button className='my-3 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black'>
                   more
                 </button>
               </div>
