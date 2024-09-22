@@ -6,13 +6,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-white font-semibold cursor-pointer relative hidden md:block
-     after:content-[''] after:absolute after:h-[3px] after:w-full
-    after:block after:bg-yellow-300 after:scale-x-0 after:hover:scale-x-100 after:origin-center
-    after:transition after:duration-300 ;
-  }
-  .nav-link-mobile {
-    @apply text-white mb-[2rem] font-semibold cursor-pointer relative md:hidden block
+    @apply text-white font-semibold cursor-pointer relative 
      after:content-[''] after:absolute after:h-[3px] after:w-full
     after:block after:bg-yellow-300 after:scale-x-0 after:hover:scale-x-100 after:origin-center
     after:transition after:duration-300 ;

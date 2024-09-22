@@ -14,12 +14,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function Home() {
-  const [nav, setNav] = useState<boolean>(false);
-  const openNav = () => setNav(true);
-  const closeNav = () => setNav(false);
-
   useEffect( () => {
-    
     // AOS library for animation
     AOS.init({
       disable: false,
@@ -44,8 +39,8 @@ export default function Home() {
   return (
     <div className=' font-primary overflow-x-hidden'>
       {/* Navbar */}
-      <MobileNav nav={nav} closeNav={closeNav} />
-      <Nav openNav={openNav} />
+      <MobileNav />
+      <Nav />
 
       {/* hero section */}
       <Hero />

@@ -1,26 +1,28 @@
-import { XMarkIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
 import React from 'react'
 
-interface props {
-    nav: boolean;
-  closeNav: () => void;
-}
-
-const MobileNav = ( { nav, closeNav }: props ) => {
-    const navAnimation = nav ? "translate-x-0" : "translate-x-[100%]";
+const MobileNav = (  ) => {
   return (
-      <div className={`${navAnimation} z-40 fixed top-0 bottom-0 left-0 right-0 transition duration-300 transform bg-[#141c27]`}>
-      <div className='flex justify-center items-center flex-col h-full w-full mt-10  '>
-        <div className='nav-link-mobile'>Home</div>
-        <div className='nav-link-mobile'>About</div>
-        <div className='nav-link-mobile'>Projects</div>
-        <div className='nav-link-mobile'>Skills</div>
-        <div className='nav-link-mobile'>Contact</div>
+    <div className='flex justify-center md:hidden'>
+      <div className={`fixed bottom-2 z-1 w-[80%] bg-[#141c27] rounded-lg`}>
+        <div className='flex justify-center items-center p-1 pb-2 '>
+          <div className='w-1/5 flex justify-center'>
+            <p className='nav-link text-[10px] sm:text-[20px]'>Home</p>
           </div>
-          <div onClick={closeNav} className=' text-yellow-300 right-[2rem] top-[1rem] w-[2rem] h-[2rem] cursor-pointer absolute'>
-              <XMarkIcon />
+          <div className='w-1/5 flex justify-center'>
+            <p className='nav-link text-[10px] sm:text-[20px]'>About</p>
           </div>
+          <div className='w-1/5 flex justify-center'>
+            <p className='nav-link text-[10px] sm:text-[20px]'>Projects</p>
+          </div>
+          <div className='w-1/5 flex justify-center'>
+            <p className='nav-link text-[10px] sm:text-[20px]'>Skills</p>
+          </div>
+          <div className='w-1/5 flex justify-center'>
+            <p className='nav-link text-[10px] sm:text-[20px]'>Contact</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
