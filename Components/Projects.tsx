@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -14,40 +15,47 @@ const Projects = () => {
   // Array of project
   const projectsArray: IProject[] = [
     {
-      GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
-      title: 'Portfolie',
-      imageUrl: './images/projects/5-Portfolio.png',
-      date: 'July - 2024',
+      GithubRepoLink: 'https://github.com/BolaSalah/food-delivery',
+      title: 'Food-Delivery',
+      imageUrl: '/images/projects/6-FoodDelivery.png',
+      date: 'Sep - 2024',
       skills: 'React.JS Next.JS TailwindCSS',
-    },
-    {
-      GithubRepoLink: 'https://github.com/BolaSalah/Movies-react',
-      title: 'Movies',
-      imageUrl: './images/projects/4-Movies.png',
-      date: 'July - 2024',
-      skills: 'React.JS TailwindCSS',
-    },
-    {
-      GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon',
-      title: 'Amazone-clone ( ITI )',
-      imageUrl: './images/projects/3-AmazonClone.png',
-      date: 'Mar & Apr - 2024',
-      skills: 'React.JS TailwindCSS',
-    },
-    {
-      GithubRepoLink: 'https://github.com/AndrewJacop/facebook-clone',
-      title: 'Facbook-clone ( ITI )',
-      imageUrl: './images/projects/2-FacebookClone.png',
-      date: 'Feb - 2024',
-      skills: 'NativeJS  Bootstrap',
-    },
-    {
-      GithubRepoLink: 'https://github.com/BolaSalah/Bola-Jewellery',
-      title: 'Jewellery ( ITI )',
-      imageUrl: './images/projects/1-Jewellery.png',
-      date: 'Jan - 2024',
-      skills: 'NativeJS Bootstrap',
-    },
+      },
+      {
+        GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
+        title: 'Portfolio',
+        imageUrl: '/images/projects/5-Portfolio.png',
+        date: 'July - 2024',
+        skills: 'React.JS Next.JS TailwindCSS',
+      },
+      {
+        GithubRepoLink: 'https://github.com/BolaSalah/Movies-react',
+        title: 'Movies',
+        imageUrl: '/images/projects/4-Movies.png',
+        date: 'July - 2024',
+        skills: 'React.JS TailwindCSS',
+      },
+      {
+        GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon',
+        title: 'Amazone-clone ( ITI )',
+        imageUrl: '/images/projects/3-AmazonClone.png',
+        date: 'Mar & Apr - 2024',
+        skills: 'React.JS TailwindCSS',
+      },
+      {
+        GithubRepoLink: 'https://github.com/AndrewJacop/facebook-clone',
+        title: 'Facbook-clone ( ITI )',
+        imageUrl: '/images/projects/2-FacebookClone.png',
+        date: 'Feb - 2024',
+        skills: 'NativeJS  Bootstrap',
+      },
+      {
+        GithubRepoLink: 'https://github.com/BolaSalah/Bola-Jewellery',
+        title: 'Jewellery ( ITI )',
+        imageUrl: '/images/projects/1-Jewellery.png',
+        date: 'Jan - 2024',
+        skills: 'NativeJS Bootstrap',
+      }
   ];
 
   return (
@@ -69,7 +77,10 @@ const Projects = () => {
             <Link href={project.GithubRepoLink} target='_blank'>
               <div className=' hover:bg-slate-800 duration-500 transition text-white  text-center'>
                 <div>
-                  <img
+                  <Image
+                    width={0}
+                    height={0}
+                    sizes='100vw'
                     className='mb-5 h-[220px] w-full'
                     src={project.imageUrl}
                     alt={project.title}
