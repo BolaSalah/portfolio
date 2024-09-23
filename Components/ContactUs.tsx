@@ -82,7 +82,7 @@ const ContactUs = () => {
       }
   };
   return (
-    <div className=' bg-black p-8 relative' id='contact'>
+    <div className='bg-black p-8 pt-12 relative' id='Contact'>
       <h1
         data-aos='zoom-in'
         className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'

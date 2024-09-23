@@ -26,7 +26,7 @@ const Skills = () => {
     ];
     
   return (
-    <div className='bg-slate-800 p-8 relative'>
+    <div className='bg-slate-800 p-12 pt-14 relative' id='Skills'>
       <h1
         data-aos='zoom-in'
         className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
