@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
+import Particle from './Particle'; // to dynamic background
+// import  Particle  from '@tsparticles/engine'; // to dynamic background
  
  interface IData  {
       monthStart: string,
@@ -13,6 +16,14 @@ const About = () => {
 
   // Array of data
   const data:IData[] = [
+    {
+      monthStart: 'Nov',
+      yearStart: '2023',
+      monthEnd: 'April',
+      yearEnd: '2024',
+      title: 'ITI course for 4 months',
+      dep: 'Front-End Development',
+    },
     {
       monthStart: 'Sep',
       yearStart: '2019',
@@ -29,17 +40,11 @@ const About = () => {
       title: 'ITI Course for 1 month',
       dep: 'Ui & Ux Development',
     },
-    {
-      monthStart: 'Nov',
-      yearStart: '2023',
-      monthEnd: 'April',
-      yearEnd: '2024',
-      title: 'ITI course for 4 months',
-      dep: 'Front-End Development',
-    },
+    
   ];
   return (
-    <div className='bg-slate-800 py-20 relative'>
+    <div className='bg-slate-800 py-20 px-12 relative' id='About'>
+      <Particle />
       <h1 className='w-[80%] mx-auto lg:hidden block uppercase font-bold text-4xl text-white mb-12 text-center'>
         About <span className='text-yellow-300'>me</span>
       </h1>
@@ -82,7 +87,12 @@ const About = () => {
         >
           <div className='bg-[#55e6a5] absolute top-8 left-8 w-[90%] h-[90%]'></div>
           <div className='w-[90%] h-[90%] overflow-hidden absolute'>
-            <img src='./images/4.png' alt='About-image' />
+            <Image
+          width={400}
+          height={400}
+            src='/images/4.png'
+            alt='About-image'
+          />
           </div>
         </div>
       </div>
