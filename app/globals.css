@@ -29,10 +29,10 @@
   }
   /* Navbar-small-screen */
   .mobile-nav {
-    @apply flex justify-center md:hidden;
+    @apply flex justify-center md:hidden p-2;
   }
   .mobile-nav-container-items {
-    @apply fixed bottom-10 z-20 w-[80%] bg-[#141c27] rounded-lg;
+    @apply fixed bottom-6 z-20 w-[80%] bg-[#141c27] rounded-lg;
   }
   .mobile-nav-items {
     @apply flex justify-center items-center p-1 pb-2;
@@ -47,7 +47,7 @@
 
   /* Hero component-start */
   .hero {
-    @apply relative z-10 py-12 sm:p-16 sm:pb-32 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden;
+    @apply relative z-10 py-16 sm:p-16 sm:pb-32 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden;
   }
   .hero-main-container {
     @apply lg:pt-16 pt-2 grid md:grid-cols-2 grid-cols-1 justify-items-center items-center w-[90%] h-full gap-1 mx-auto;
