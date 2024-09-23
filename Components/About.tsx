@@ -43,12 +43,12 @@ const About = () => {
     
   ];
   return (
-    <div className='bg-slate-800 py-20 px-12 relative' id='About'>
+    <div className='bg-slate-800 py-20 sm:px-12 px-2 relative' id='About'>
       <Particle />
-      <h1 className='w-[80%] mx-auto lg:hidden block uppercase font-bold text-4xl text-white mb-12 text-center'>
+      <h1 className='sm:w-[80%] w-[90%] mx-auto lg:hidden block uppercase font-bold text-4xl text-white mb-12 text-center'>
         About <span className='text-yellow-300'>me</span>
       </h1>
-      <div className='w-[80%] mx-auto grid lg:grid-cols-2 grid-cols-1 items-center overflow-x-hidden'>
+      <div className='sm:w-[80%] w-[90%] mx-auto grid lg:grid-cols-2 grid-cols-1 items-center overflow-x-hidden'>
         {/* about-data */}
         <div className='px-4 sm:px-10 lg:order-1 order-2'>
           <h1
@@ -92,6 +92,7 @@ const About = () => {
           height={400}
             src='/images/4.png'
             alt='About-image'
+            className="w-full h-auto"
           />
           </div>
         </div>

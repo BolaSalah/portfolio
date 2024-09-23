@@ -93,7 +93,7 @@ const ContactUs = () => {
         {ContactUsArray.map((item, index) => (
           <div
             data-aos='fade-up'
-            data-aos-delay='100'
+            data-aos-delay={`${index}00`}
             key={index}
             className='lg:w-[33%] sm:w-[49%] w-[98%] my-10 p-4 flex sm:gap-5 gap-3 mx-auto hover:cursor-pointer relative'
           >

@@ -16,7 +16,7 @@ const TextEffect = () => {
       ]}
       wrapper='span'
       speed={50}
-      className='lg:text-4xl md:text-2xl text-lg font-bold text-[#55e6a5] uppercase'
+      className='xl:text-3xl text-lg font-bold text-[#55e6a5] uppercase'
       repeat={Infinity}
     />
   );
