@@ -8,7 +8,7 @@
   /* navbar-start */
   /* Navbar-Large-screen  */
   .Navbar {
-    @apply shadow-md w-[100%] h-[9vh] bg-[#141c27] z-30 fixed top-0;
+    @apply shadow-md w-[100%] sm:h-[9vh] h-[4vh] bg-[#141c27] z-30 fixed top-0;
   }
   .Navbar-items {
     @apply flex md:justify-between justify-center items-center h-full md:w-[80%] w-full ms-auto md:mx-auto;
@@ -32,7 +32,7 @@
     @apply flex justify-center md:hidden;
   }
   .mobile-nav-container-items {
-    @apply fixed bottom-2 z-20 w-[80%] bg-[#141c27] rounded-lg;
+    @apply fixed bottom-10 z-20 w-[80%] bg-[#141c27] rounded-lg;
   }
   .mobile-nav-items {
     @apply flex justify-center items-center p-1 pb-2;

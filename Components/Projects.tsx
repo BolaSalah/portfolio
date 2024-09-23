@@ -69,7 +69,7 @@ const Projects = () => {
         {projectsArray.map((project, index) => (
           <div
             data-aos='fade-up'
-            data-aos-delay={`${index*2}00`}
+            data-aos-delay={`${index}00`}
             className='bg-slate-700 my-4 lg:w-[30%] sm:w-[45%] w-[90%] rounded-lg shadow-CardProjects overflow-hidden'
             key={index}
           >
