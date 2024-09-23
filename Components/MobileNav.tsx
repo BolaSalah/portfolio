@@ -1,30 +1,39 @@
-import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 
-const MobileNav = (  ) => {
+const MobileNav = () => {
   return (
-    <div className='flex justify-center md:hidden'>
-      <div className={`fixed bottom-2 z-1 w-[80%] bg-[#141c27] rounded-lg`}>
-        <div className='flex justify-center items-center p-1 pb-2 '>
-          <div className='w-1/5 flex justify-center'>
-            <p className='nav-link text-[10px] sm:text-[20px]'>Home</p>
+    <div className='mobile-nav'>
+      <div className='mobile-nav-container-items'>
+        <div className='mobile-nav-items'>
+          <div className='mobile-nav-item'>
+            <a href='#' className='mobile-nav-link'>
+              Home
+            </a>
           </div>
-          <div className='w-1/5 flex justify-center'>
-            <p className='nav-link text-[10px] sm:text-[20px]'>About</p>
+          <div className='mobile-nav-item'>
+            <a href='#About' className='mobile-nav-link'>
+              About
+            </a>
           </div>
-          <div className='w-1/5 flex justify-center'>
-            <p className='nav-link text-[10px] sm:text-[20px]'>Projects</p>
+          <div className='mobile-nav-item'>
+            <a href='#Projects' className='mobile-nav-link'>
+              Projects
+            </a>
           </div>
-          <div className='w-1/5 flex justify-center'>
-            <p className='nav-link text-[10px] sm:text-[20px]'>Skills</p>
+          <div className='mobile-nav-item'>
+            <a href='#Skills' className='mobile-nav-link'>
+              Skills
+            </a>
           </div>
-          <div className='w-1/5 flex justify-center'>
-            <p className='nav-link text-[10px] sm:text-[20px]'>Contact</p>
+          <div className='mobile-nav-item'>
+            <a href='#Contact' className='mobile-nav-link'>
+              Contact
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default MobileNav
+export default MobileNav;

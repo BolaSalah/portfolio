@@ -2,17 +2,27 @@ import React from 'react';
 
 const Nav = () => {
   return (
-    <div className=' shadow-md w-[100%] h-[12vh] bg-[#141c27] z-30 relative top-0 '>
-      <div className='flex md:justify-between justify-center items-center h-full md:w-[80%] w-full ms-auto md:mx-auto'>
-        <h1 className='md:flex-[0.6] font-bold sm:text-[25px] text-white cursor-pointer'>
+    <div className='Navbar'>
+      <div className='Navbar-items'>
+        <h1 className='Navbar-logo'>
           WEP
           <span className='text-yellow-300'>DEV</span>
         </h1>
-        <div className='nav-link hidden md:block'>Home</div>
-        <div className='nav-link hidden md:block'>About</div>
-        <div className='nav-link hidden md:block'>Projects</div>
-        <div className='nav-link hidden md:block'>Skills</div>
-        <div className='nav-link hidden md:block'>Contact</div>
+        <a href='#' className='nav-link'>
+          Home
+        </a>
+        <a href='#About' className='nav-link'>
+          About
+        </a>
+        <a href='#Projects' className='nav-link'>
+          Projects
+        </a>
+        <a href='#Skills' className='nav-link'>
+          Skills
+        </a>
+        <a href='#Contact' className='nav-link'>
+          Contact
+        </a>
       </div>
     </div>
   );
