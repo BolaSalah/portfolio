@@ -88,10 +88,7 @@ Distributed under the [MIT License](LICENSE) , click for more information.
 ## <a name="Screenshot">📸 Screenshot</a>
   
 <div>
-    <img src="https://github.com/BolaSalah/portfolio/blob/main/public/images/screenshot/about.png" alt="about" />
-    <img src="https://github.com/BolaSalah/portfolio/blob/main/public/images/screenshot/projects.png" alt="projects" />
-    <img src="https://github.com/BolaSalah/portfolio/blob/main/public/images/screenshot/skills.png" alt="skills" />
-    <img src="https://github.com/BolaSalah/portfolio/blob/main/public/images/screenshot/cntactUs%20and%20footer.png" alt="footer" />
+    <img src="https://github.com/BolaSalah/portfolio/blob/main/public/images/screenshot/Portofolio.png" alt="Portofolio" />
 </div>
 
 
