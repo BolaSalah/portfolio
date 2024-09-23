@@ -6,7 +6,7 @@ const TextEffect = () => {
       sequence={[
         // Same substring at the start will only be typed out once, initially
         'Front-End Developer',
-        1000, // wait 1s before replacing
+        3000, // wait 3s before replacing
         'Ui & Ux Developer',
         1000,
         'Web Developer',
