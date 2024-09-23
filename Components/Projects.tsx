@@ -3,15 +3,14 @@ import Link from 'next/link';
 import React from 'react';
 
 interface IProject {
-  GithubRepoLink: string,
-      title:string,
-      imageUrl:string,
-      date:string,
-      skills:string,
+  GithubRepoLink: string;
+  title: string;
+  imageUrl: string;
+  date: string;
+  skills: string;
 }
 
 const Projects = () => {
-  
   // Array of project
   const projectsArray: IProject[] = [
     {
@@ -20,46 +19,46 @@ const Projects = () => {
       imageUrl: '/images/projects/6-FoodDelivery.png',
       date: 'Sep - 2024',
       skills: 'React.JS Next.JS TailwindCSS',
-      },
-      {
-        GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
-        title: 'Portfolio',
-        imageUrl: '/images/projects/5-Portfolio.png',
-        date: 'July - 2024',
-        skills: 'React.JS Next.JS TailwindCSS',
-      },
-      {
-        GithubRepoLink: 'https://github.com/BolaSalah/Movies-react',
-        title: 'Movies',
-        imageUrl: '/images/projects/4-Movies.png',
-        date: 'July - 2024',
-        skills: 'React.JS TailwindCSS',
-      },
-      {
-        GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon',
-        title: 'Amazone-clone ( ITI )',
-        imageUrl: '/images/projects/3-AmazonClone.png',
-        date: 'Mar & Apr - 2024',
-        skills: 'React.JS TailwindCSS',
-      },
-      {
-        GithubRepoLink: 'https://github.com/AndrewJacop/facebook-clone',
-        title: 'Facbook-clone ( ITI )',
-        imageUrl: '/images/projects/2-FacebookClone.png',
-        date: 'Feb - 2024',
-        skills: 'NativeJS  Bootstrap',
-      },
-      {
-        GithubRepoLink: 'https://github.com/BolaSalah/Bola-Jewellery',
-        title: 'Jewellery ( ITI )',
-        imageUrl: '/images/projects/1-Jewellery.png',
-        date: 'Jan - 2024',
-        skills: 'NativeJS Bootstrap',
-      }
+    },
+    {
+      GithubRepoLink: 'https://github.com/BolaSalah/portfolio',
+      title: 'Portfolio',
+      imageUrl: '/images/projects/5-Portfolio.png',
+      date: 'July - 2024',
+      skills: 'React.JS Next.JS TailwindCSS',
+    },
+    {
+      GithubRepoLink: 'https://github.com/BolaSalah/Movies-react',
+      title: 'Movies',
+      imageUrl: '/images/projects/4-Movies.png',
+      date: 'July - 2024',
+      skills: 'React.JS TailwindCSS',
+    },
+    {
+      GithubRepoLink: 'https://github.com/EslamElkurdi/Amazon',
+      title: 'Amazone-clone ( ITI )',
+      imageUrl: '/images/projects/3-AmazonClone.png',
+      date: 'Mar & Apr - 2024',
+      skills: 'React.JS TailwindCSS',
+    },
+    {
+      GithubRepoLink: 'https://github.com/AndrewJacop/facebook-clone',
+      title: 'Facbook-clone ( ITI )',
+      imageUrl: '/images/projects/2-FacebookClone.png',
+      date: 'Feb - 2024',
+      skills: 'NativeJS  Bootstrap',
+    },
+    {
+      GithubRepoLink: 'https://github.com/BolaSalah/Bola-Jewellery',
+      title: 'Jewellery ( ITI )',
+      imageUrl: '/images/projects/1-Jewellery.png',
+      date: 'Jan - 2024',
+      skills: 'NativeJS Bootstrap',
+    },
   ];
 
   return (
-    <div className=' bg-black p-12 relative'>
+    <div className='bg-black p-12 pt-14 relative' id='Projects'>
       <h1
         data-aos='zoom-in'
         className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
