@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 @layer components {
+  /* navbar-start */
   /* Navbar-Large-screen  */
   .Navbar {
     @apply shadow-md w-[100%] h-[9vh] bg-[#141c27] z-30 fixed top-0;
@@ -42,6 +43,38 @@
   .mobile-nav-link {
     @apply text-[10px] sm:text-[20px];
   }
+  /* navbar-end */
+
+  /* Hero component-start */
+  .hero {
+    @apply relative z-10 py-12 sm:p-16 sm:pb-20 bg-[url("/images/banner.jpg")] bg-cover bg-center overflow-x-hidden;
+  }
+  .hero-main-container {
+    @apply lg:pt-16 pt-2 grid md:grid-cols-2 grid-cols-1 justify-items-center items-center w-[80%] h-full gap-12 mx-auto;
+  }
+  .hero-main {
+    @apply mt-6 flex flex-col justify-center lg:items-start items-center md:order-1 order-2;
+  }
+  .hero-name {
+    @apply mb-3 font-bold lg:text-4xl md:text-2xl text-lg text-white;
+  }
+  .hero-description {
+    @apply text-[#ffffff92] mt-3 lg:text-left text-center;
+  }
+  .hero-cv {
+    @apply grid mt-3;
+  }
+  .hero-cv-download {
+    @apply p-4 rounded-lg bg-[#55e6a5] hover:bg-yellow-300 uppercase flex justify-center gap-2;
+  }
+  .hero-image-container {
+    @apply md:order-2 order-1 lg:w-[400px] lg:h-[400px] sm:w-[300px] sm:h-[300px] w-[220px] h-[220px]
+           relative flex items-center justify-center rounded-full overflow-hidden;
+  }
+  .hero-image {
+    @apply rounded-full object-contain w-full h-auto;
+  }
+  /* Hero component-end */
 
   .title {
     @apply font-bold lg:text-xl md:text-lg text-sm mb-6 relative items-center mx-auto 
