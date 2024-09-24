@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState, useEffect, useRef } from 'react';
 import { BiLogoGmail } from 'react-icons/bi';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
+import emailjs from '@emailjs/browser';
+import Particle from './Particle'; // to dynamic background
+import { ToastContainer, toast } from 'react-toastify'; // to show toast when click send message
 
 interface IElement {
   title: string;
@@ -10,7 +14,10 @@ interface IElement {
 }
 
 const ContactUs = () => {
-
+  const notify = () => toast(`Thanks, you sent a message to Bola`);
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userMessage, setUserMessage] = useState('');
   // Array of elements
   const ContactUsArray: IElement[] = [
     { title: 'Address', icon: <FaLocationDot />, data: 'El Nozha 2 - Cairo' },
@@ -22,98 +29,147 @@ const ContactUs = () => {
     },
   ];
 
-  // get my location
-  // const [latitude, setLatitude] = useState<number>();
-  // const [longitude, setLongitude] = useState<number>();
-  // const [error, setError] = useState<string>();
-
-  // useEffect(() => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(
-  //       (position) => {
-  //         console.log(position);
-  //         setLatitude(position.coords.latitude);
-  //         setLongitude(position.coords.longitude);
-  //       },
-  //       (error) => {
-  //         setError(error.message);
-  //         console.error('Error retrieving location:', error);
-  //       }
-  //     );
-  //   } else {
-  //     setError('Geolocation is not supported by this browser.');
-  //     console.error('Geolocation is not supported by this browser.');
-  //   }
-  // }, []);
-
   // url of my location
-  const mapUrl = 'https://maps.google.com/?q='; 
-  const latitude = 30.1427316; 
-  const longitude = 31.3754579; 
+  const mapUrl = 'https://maps.google.com/?q=';
+  const latitude = 30.1427316;
+  const longitude = 31.3754579;
 
   // code, whatsAppUrl and phone for whatsapp masssage
-  const countryCode = '+20'; 
+  const countryCode = '+20';
   const phoneNumber = '01202554039';
-  const whatsAppUrl = 'https://wa.me/'; 
+  const whatsAppUrl = 'https://wa.me/';
 
   // email address for  masssage on gmail
   const emailAddress = 'bolasalah1999@gmail.com';
-  
-  // handle function when click on button 
-  const handleMapClick = (event:any) => {
 
+  // handle function when click on button
+  const handleMapClick = (event: any) => {
     // address
-    if (event.target.name == "Address") {
-    if (latitude && longitude) {
-      window.open(`${mapUrl}${latitude},${longitude}`,'_blank');
+    if (event.target.name == 'Address') {
+      if (latitude && longitude) {
+        window.open(`${mapUrl}${latitude},${longitude}`, '_blank');
       }
     }
     // whatsapp
-    else if (event.target.name == "WhatsApp") {
-      window.open(
-       `${whatsAppUrl}${countryCode}${phoneNumber}`,'_blank'
-      );
+    else if (event.target.name == 'WhatsApp') {
+      window.open(`${whatsAppUrl}${countryCode}${phoneNumber}`, '_blank');
+    }
+    // gmail
+    else if (event.target.name == 'Send Us Email') {
+      window.open(`mailto:${emailAddress}`, '_blank');
+    }
+  };
+  const form = useRef<HTMLFormElement | null>(null);
+
+  // send email to me
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (form.current) {
+      try {
+         emailjs.sendForm(
+          'service_h9bnen1',
+          'template_ejnmuy9',
+          form.current,
+          {
+            publicKey: 'bHJcqMModNrqGVFeu',
+          }
+        );
+        console.log('Email sent successfully!');
+        notify();
+        setUserName('');
+        setUserEmail('');
+        setUserMessage('');
+      } catch (error) {
+        console.error('Failed to send email:', error);
       }
-      // gmail
-      else if (event.target.name == "Send Us Email") {
-      window.open(
-       `mailto:${emailAddress}`,'_blank'
-      );
-      }
+    }
   };
   return (
-    <div className='bg-black p-8 pt-12 relative' id='Contact'>
-      <h1
-        data-aos='zoom-in'
-        className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
-      >
-        Contact<span className='text-yellow-300'>us</span>
+    <div className='contact' id='Contact'>
+      <Particle />
+      <h1 data-aos='zoom-in' className='contact-title'>
+        Contact<span className='yellow'>us</span>
       </h1>
-      <div className='flex flex-wrap gap-1 w-[90%] mx-auto justify-center items-center'>
+      <div className='contact-container-items'>
         {ContactUsArray.map((item, index) => (
           <div
             data-aos='fade-up'
             data-aos-delay={`${index}00`}
             key={index}
-            className='lg:w-[33%] sm:w-[49%] w-[98%] my-10 p-4 flex sm:gap-5 gap-3 mx-auto hover:cursor-pointer relative'
+            className='contact-container-item'
           >
             <button
-            name={item.title}
-              className=' w-full h-full absolute top-0 '
+              name={item.title}
+              className='contact-container-item-btn'
               onClick={(event) => {
                 handleMapClick(event);
               }}
-              >
-              </button>
-              <div className='sm:text-7xl text-4xl bg-[#55e6a5] p-4 rounded-full'>
-                {item.icon}
-              </div>
-              <div className='text-white sm:mt-4'>
-                <h1 className='sm:text-2xl text-lg mb-3'>{item.title}</h1>
-                <p className='sm:text-lg text-sm'>{item.data}</p>
-              </div>
+            ></button>
+            <div className='contact-container-item-icon'>{item.icon}</div>
+            <div className='contact-container-item-description'>
+              <h1 className='contact-container-item-title'>{item.title}</h1>
+              <p className='contact-container-item-data'>{item.data}</p>
+            </div>
           </div>
         ))}
+      </div>
+      <div className='contact-container-form'>
+        <form ref={form} onSubmit={sendEmail} className='contact-form'>
+          <h1 className='contact-form-title'>
+            write a <span className='yellow'>message</span> to me
+          </h1>
+          <div className='contact-form-contianer-inputs'>
+            <label className='contact-form-contianer-label'>Name</label>
+            <input
+              type='text'
+              name='user_name'
+              className='contact-form-contianer-input'
+              required
+              value={userName}
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            />
+            <label className='contact-form-contianer-label'>Email</label>
+            <input
+              type='email'
+              name='user_email'
+              className='contact-form-contianer-input'
+              required
+              value={userEmail}
+              onChange={(e) => {
+                setUserEmail(e.target.value);
+              }}
+            />
+            <label className='contact-form-contianer-label'>Message</label>
+            <textarea
+              name='message'
+              className='contact-form-contianer-area'
+              required
+              value={userMessage}
+              onChange={(e) => {
+                setUserMessage(e.target.value);
+              }}
+            />
+            <input
+              type='submit'
+              value='Send'
+              className='contact-form-contianer-submit'
+            />
+          </div>
+          <ToastContainer
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme='dark'
+          />
+        </form>
       </div>
     </div>
   );
