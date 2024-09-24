@@ -6,7 +6,7 @@ const Nav = () => {
       <div className='Navbar-items'>
         <h1 className='Navbar-logo'>
           WEP
-          <span className='text-yellow-300'>DEV</span>
+          <span className='yellow'>DEV</span>
         </h1>
         <a href='#' className='nav-link'>
           Home

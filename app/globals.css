@@ -4,7 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* to scroll slowly when click on item in navbar */
+html {
+  scroll-behavior: smooth;
+}
 @layer components {
+  /* common class */
+  .yellow {
+    @apply text-yellow-300;
+  }
+
+  .text-effect {
+    @apply xl:text-3xl text-lg font-bold text-[#55e6a5] uppercase;
+  }
+
   /* navbar-start */
   /* Navbar-Large-screen  */
   .Navbar {
@@ -26,7 +39,7 @@
   }
   /* Navbar-small-screen */
   .mobile-nav {
-    @apply flex justify-center md:hidden p-2 fixed bottom-6 z-20 w-full;
+    @apply flex justify-center md:hidden px-2 py-8 fixed bottom-4 z-20 w-full;
   }
   .mobile-nav-items {
     @apply flex justify-center items-center p-1 pb-2 w-[80%] bg-[#141c27] rounded-lg;
@@ -55,10 +68,10 @@
   .hero-description {
     @apply text-[#ffffff92] mt-3 lg:text-left text-center;
   }
-  .hero-container-cv{
+  .hero-container-cv {
     @apply flex mt-3 gap-3 justify-center flex-wrap;
   }
-  .hero-cv-download-link{
+  .hero-cv-download-link {
     @apply p-4 flex gap-2 bg-[#55e6a5] hover:bg-yellow-300 rounded-lg uppercase justify-center;
   }
   .hero-cv-download-link-icon {
@@ -73,22 +86,158 @@
   }
   /* Hero-component-end */
 
+  /* about-component-start */
+  .about {
+    @apply bg-slate-800 py-20 sm:px-12 px-2 relative z-10;
+  }
+  .about-title-small {
+    @apply sm:w-[80%] w-[90%] mx-auto lg:hidden block uppercase font-bold text-4xl text-white mb-12 text-center;
+  }
+  .about-container {
+    @apply sm:w-[80%] w-[90%] mx-auto grid lg:grid-cols-2 grid-cols-1 items-center overflow-x-hidden;
+  }
+  .abour-left {
+    @apply px-4 sm:px-10 lg:order-1 order-2;
+  }
+  .about-title-large {
+    @apply hidden lg:block uppercase font-bold text-3xl text-white mb-5 text-center;
+  }
+  .about-item {
+    @apply flex items-center text-center bg-[#55e6a5] my-10;
+  }
+  .about-item-right {
+    @apply bg-yellow-300 sm:-rotate-[30deg] origin-bottom-left sm:text-xl w-[15%];
+  }
+  .about-item-data {
+    @apply w-[70%] sm:text-lg text-sm;
+  }
+  .about-item-left {
+    @apply bg-yellow-300 sm:rotate-[30deg] origin-bottom-right sm:text-xl w-[15%];
+  }
+  .about-right {
+    @apply sm:w-[450px] sm:h-[450px] w-[300px] h-[300px] mx-auto overflow-hidden relative lg:order-2 order-1;
+  }
+  .about-right-box {
+    @apply bg-[#55e6a5] absolute top-8 left-8 w-[90%] h-[90%];
+  }
+  .about-right-container-img {
+    @apply w-[90%] h-[90%] overflow-hidden absolute;
+  }
+  .about-right-img {
+    @apply w-full h-auto;
+  }
+  /* about-component-end */
+
   /* projects-component-start */
-  .title {
+  .projects {
+    @apply z-10 bg-black p-12 pt-14 relative;
+  }
+  .projects-title {
+    @apply uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto;
+  }
+  .projects-container {
+    @apply flex flex-wrap gap-8 my-8 w-[90%] mx-auto justify-center items-center;
+  }
+  .projects-item {
+    @apply bg-slate-700 my-4 lg:w-[30%] sm:w-[45%] w-[90%] rounded-lg shadow-CardProjects overflow-hidden;
+  }
+  .projects-item-card {
+    @apply hover:bg-slate-800 duration-500 transition text-white text-center;
+  }
+  .projects-item-card-img {
+    @apply mb-5 h-[220px] w-full;
+  }
+  .projects-item-card-title {
     @apply font-bold lg:text-xl md:text-lg text-sm mb-6 relative items-center mx-auto 
     after:absolute after:mt-2 after:ms-[38%] after:w-1/4 after:h-1 after:bg-[#55e6a5] after:block;
   }
+  .projects-item-card-skills {
+    @apply [word-spacing:5px] text-sm xl:text-lg mb-2;
+  }
+  .projects-item-card-btn {
+    @apply my-3 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black;
+  }
   /* projects-component-end */
+
+  /* skills-component-start */
+  .skills {
+    @apply bg-slate-800 p-12 pt-14 relative z-10;
+  }
+  .skills-title {
+    @apply uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto;
+  }
+  .skills-container {
+    @apply w-[90%] mx-auto flex sm:gap-2 gap-8 flex-wrap my-12 justify-center;
+  }
+  .skills-item {
+    @apply md:w-[19%] sm:w-[32%] w-[40%] flex flex-col items-center mb-2 sm:mb-10 py-4 bg-[#55e6a5];
+  }
+  .skills-item-icon {
+    @apply sm:text-8xl text-6xl;
+  }
+  .skills-item-title {
+    @apply sm:text-xl mt-3;
+  }
+  /* skills-component-end */
+
+  /* contact-component-start */
+  .contact {
+    @apply bg-black p-8 pt-16 relative;
+  }
+  .contact-title {
+    @apply uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto;
+  }
+  .contact-container-items {
+    @apply flex flex-wrap gap-1 w-[90%] mx-auto justify-center items-center;
+  }
+  .contact-container-item {
+    @apply lg:w-[33%] sm:w-[49%] w-[98%] my-4 p-4 flex sm:gap-5 gap-3 mx-auto hover:cursor-pointer relative;
+  }
+  .contact-container-item-btn {
+    @apply w-full h-full absolute top-0;
+  }
+  .contact-container-item-icon {
+    @apply sm:text-7xl text-4xl bg-[#55e6a5] p-4 rounded-full;
+  }
+  .contact-container-item-description {
+    @apply text-white sm:mt-4;
+  }
+  .contact-container-item-title {
+    @apply sm:text-2xl text-lg mb-3;
+  }
+  .contact-container-item-data {
+    @apply sm:text-lg text-sm;
+  }
+  /* contact-form */
+  .contact-container-form {
+    @apply flex justify-center items-center;
+  }
+  .contact-form {
+    @apply text-black flex flex-col items-center justify-center gap-4;
+  }
+  .contact-form-title {
+    @apply text-white md:text-3xl sm:text-2xl text-lg font-bold;
+  }
+  .contact-form-contianer-inputs {
+    @apply flex flex-col px-6 w-full;
+  }
+  .contact-form-contianer-label {
+    @apply text-white mt-4 mb-1;
+  }
+  .contact-form-contianer-input {
+    @apply rounded p-1;
+  }
+  .contact-form-contianer-area {
+    @apply py-4 px-1;
+  }
+  .contact-form-contianer-submit {
+    @apply mt-4 bg-[#55e6a5] rounded  py-1 text-black hover:cursor-pointer hover:bg-yellow-300 duration-500 transform;
+  }
+  /* contact-component-end */
 
   /* footer-component-start */
   .footer {
-    @apply bg-slate-800 text-lg py-6 relative flex items-center justify-center gap-3 text-white
+    @apply bg-slate-800 text-lg py-6 relative flex items-center justify-center gap-3 text-white;
   }
   /* footer-component-end */
-
-  
-}
-
-html {
-  scroll-behavior: smooth;
 }

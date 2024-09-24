@@ -57,40 +57,35 @@ const Projects = () => {
     },
   ];
   return (
-    <div className='bg-black p-12 pt-14 relative' id='Projects'>
-      <h1
-        data-aos='zoom-in'
-        className='uppercase text-white font-bold text-3xl w-[90%] text-center mx-auto'
-      >
-        pro<span className='text-yellow-300'>jects</span>
+    <div className='projects' id='Projects'>
+      <h1 data-aos='zoom-in' className='projects-title'>
+        pro<span className='yellow'>jects</span>
       </h1>
-      <div className='flex flex-wrap gap-8 my-8 w-[90%] mx-auto justify-center items-center'>
+      <div className='projects-container'>
         {projectsArray.map((project, index) => (
           <div
             data-aos='flip-up'
             data-aos-delay={`${index}00`}
-            className='bg-slate-700 my-4 lg:w-[30%] sm:w-[45%] w-[90%] rounded-lg shadow-CardProjects overflow-hidden'
+            className='projects-item'
             key={index}
           >
             <Link href={project.GithubRepoLink} target='_blank'>
-              <div className=' hover:bg-slate-800 duration-500 transition text-white  text-center'>
+              <div className='projects-item-card'>
                 <div>
                   <Image
                     width={200}
                     height={200}
-                    className='mb-5 h-[220px] w-full'
+                    className='projects-item-card-img'
                     src={project.imageUrl}
                     alt={project.title}
                   />
                 </div>
-                <div className='title'>{project.title}</div>
-                <div className=' [word-spacing:5px] text-sm xl:text-lg'>
+                <div className='projects-item-card-title'>{project.title}</div>
+                <div className='projects-item-card-skills'>
                   {project.skills}
                 </div>
-                <div className='mt-2'>{project.date}</div>
-                <button className='my-3 bg-[#9acdb6] transition duration-500 hover:bg-[#55e6a5] px-8 py-2 rounded-lg text-black'>
-                  more
-                </button>
+                <div>{project.date}</div>
+                <button className='projects-item-card-btn'>more</button>
               </div>
             </Link>
           </div>
