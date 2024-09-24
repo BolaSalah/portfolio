@@ -56,7 +56,6 @@ const Projects = () => {
       skills: 'NativeJS Bootstrap',
     },
   ];
-
   return (
     <div className='bg-black p-12 pt-14 relative' id='Projects'>
       <h1
@@ -68,7 +67,7 @@ const Projects = () => {
       <div className='flex flex-wrap gap-8 my-8 w-[90%] mx-auto justify-center items-center'>
         {projectsArray.map((project, index) => (
           <div
-            data-aos='fade-up'
+            data-aos='flip-up'
             data-aos-delay={`${index}00`}
             className='bg-slate-700 my-4 lg:w-[30%] sm:w-[45%] w-[90%] rounded-lg shadow-CardProjects overflow-hidden'
             key={index}
@@ -77,9 +76,8 @@ const Projects = () => {
               <div className=' hover:bg-slate-800 duration-500 transition text-white  text-center'>
                 <div>
                   <Image
-                    width={0}
-                    height={0}
-                    sizes='100vw'
+                    width={200}
+                    height={200}
                     className='mb-5 h-[220px] w-full'
                     src={project.imageUrl}
                     alt={project.title}
