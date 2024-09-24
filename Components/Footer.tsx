@@ -5,7 +5,7 @@ import { FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div className='bg-slate-800 text-lg py-6 relative flex items-center justify-center gap-3 text-white'>
+    <div className='footer'>
       <span>© 2024 Bola Salah</span>
       <Link href={'https://github.com/BolaSalah'} target='_blank'>
         <BsGithub />
