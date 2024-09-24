@@ -3,7 +3,6 @@ import React from 'react';
 const MobileNav = () => {
   return (
     <div className='mobile-nav'>
-      <div className='mobile-nav-container-items'>
         <div className='mobile-nav-items'>
           <div className='mobile-nav-item'>
             <a href='#' className='mobile-nav-link'>
@@ -31,7 +30,6 @@ const MobileNav = () => {
             </a>
           </div>
         </div>
-      </div>
     </div>
   );
 };
