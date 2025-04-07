@@ -16,6 +16,7 @@ import 'aos/dist/aos.css';
 export default function Home() {
   useEffect(() => {
     // AOS library for animation
+
     AOS.init({
       disable: false,
       startEvent: 'DOMContentLoaded',

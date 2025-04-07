@@ -1,8 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Nav = () => {
+
+  //  const [show, setShow] = useState(false)
+  // const controlNavbar = () => {
+  //     if (window.scrollY >  250 ) {
+  //         setShow(true)
+  //     }else{
+  //       setShow(false)
+  //     }
+  // }
+
+  // useEffect(() => {
+  //     window.addEventListener('scroll', controlNavbar)
+  //     return () => {
+  //         window.removeEventListener('scroll', controlNavbar)
+  //     }
+  // }, [])
+
+const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+      setShow(true); 
+    } else { // if scroll up show the navbar
+      setShow(false);  
+    }
+
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY); 
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+
+    // cleanup function
+    return () => {
+       window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
+  // className={`active ${show && 'hidden'}`}
   return (
-    <div className='Navbar'>
+    // <div className='Navbar'>
+      <div className={`active ${show && 'hidden'}`}>
       <div className='Navbar-items'>
         <h1 className='Navbar-logo'>
           WEP
