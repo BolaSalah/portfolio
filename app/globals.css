@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.active{
+/* .active{
     height: 4rem;
     width: 100%;
     position: fixed;
@@ -27,7 +27,7 @@ html {
     position: fixed;
     top: -80px;
     transition: 0.3s linear;
-}
+} */
 
 @layer components {
   /* common class */

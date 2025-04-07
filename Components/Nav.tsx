@@ -18,28 +18,28 @@ const Nav = () => {
   //     }
   // }, [])
 
-const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+// const [show, setShow] = useState(true);
+//   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-      setShow(true); 
-    } else { // if scroll up show the navbar
-      setShow(false);  
-    }
+//   const controlNavbar = () => {
+//     if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+//       setShow(true); 
+//     } else { // if scroll up show the navbar
+//       setShow(false);  
+//     }
 
-    // remember current page location to use in the next move
-    setLastScrollY(window.scrollY); 
-  };
+//     // remember current page location to use in the next move
+//     setLastScrollY(window.scrollY); 
+//   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', controlNavbar);
+//   useEffect(() => {
+//     window.addEventListener('scroll', controlNavbar);
 
-    // cleanup function
-    return () => {
-       window.removeEventListener('scroll', controlNavbar);
-    };
-  }, [lastScrollY]);
+//     // cleanup function
+//     return () => {
+//        window.removeEventListener('scroll', controlNavbar);
+//     };
+//   }, [lastScrollY]);
 
   // className={`active ${show && 'hidden'}`}
   return (
