@@ -43,8 +43,8 @@ const [show, setShow] = useState(true);
 
   // className={`active ${show && 'hidden'}`}
   return (
-    // <div className='Navbar'>
-      <div className={`active ${show && 'hidden'}`}>
+      //</div><div className={`active ${show && 'hidden'}`}>
+    <div className='Navbar'>
       <div className='Navbar-items'>
         <h1 className='Navbar-logo'>
           WEP
